@@ -1,37 +1,48 @@
-<?php 
-    $userChoise = $_GET["username"];
+<?php
+$username = 0;
+    // Évaluée à vrai car $var est vide
+    /*if (empty($userChoise)) {
+      echo "";
+    }*/
+    // Évaluée à vrai car $var est définie
+    if (isset($userChoise)) {
+      echo $username =$_GET["username"];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
+        <link href="style.css" rel="stylesheet">
         <title>
             Le héros c'est toi!
         </title>
     </head>
     <body>
-        <form action="page2.phtml" method="GET">
-           <section>
-                <fieldset>
-                    <label for="username">
-                        Quel est votre nom, héros ?
-                    </label>
-                    <input type="text" id="username" name="username"/>
-                </fieldset>
-                
-                <fieldset>
-                    <button type="submit">
-                        COMMENCER VOTRE AVENTURE
-                    </button>
-                </fieldset>
-            </section> 
-        </form>
-            <section>
-                <img src=""></img>
-                <h1>
-                    Le site dont vous etes le héros
-                </h1>
-            </section>
-            <script src="main.js"></script>
+        <main>
+            <form action="page2.php" method="GET">
+               <section>
+                    <fieldset>
+                        <label for="username">
+                            Quel est votre nom, héros ?
+                        </label>
+                        <input type="text" id="username" name="username"/>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <button type="submit">
+                            COMMENCER VOTRE AVENTURE
+                        </button>
+                    </fieldset>
+                </section> 
+            </form>
+                <section>
+                    <h1>
+                        Le site dont vous etes le héros
+                        <img src="https://cdn1.ftimg.com/images/logos/big/fr_FR/super-hero-logo.png"/>
+                    </h1>
+                </section>
+                <script src="main.js"></script>
+        </main>
     </body>
 </html>
