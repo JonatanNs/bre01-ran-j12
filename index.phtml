@@ -1,26 +1,18 @@
 <?php
-$username = 0;
-    // Évaluée à vrai car $var est vide
-    /*if (empty($userChoise)) {
-      echo "";
-    }*/
-    // Évaluée à vrai car $var est définie
-    if (isset($userChoise)) {
-      echo $username =$_GET["username"];
-    }
+$username = "";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link href="style.css" rel="stylesheet">
-        <title>
+        <h1>
             Le héros c'est toi!
-        </title>
+        </h1>
     </head>
     <body>
         <main>
-            <form action="page2.php" method="GET">
+            <form action="page2.phtml" method="GET">
                <section>
                     <fieldset>
                         <label for="username">
@@ -37,10 +29,10 @@ $username = 0;
                 </section> 
             </form>
                 <section>
-                    <h1>
+                    <h2>
                         Le site dont vous etes le héros
                         <img src="https://cdn1.ftimg.com/images/logos/big/fr_FR/super-hero-logo.png"/>
-                    </h1>
+                    </h2>
                 </section>
                 <script src="main.js"></script>
         </main>

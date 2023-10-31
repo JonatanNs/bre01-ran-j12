@@ -1,0 +1,47 @@
+<?php
+$username = "";
+    $username = $_GET["username"];
+    if (empty($_GET["username"])) {
+      echo "username";
+    }
+    // Évaluée à vrai car $var est définie
+    if (isset($_GET["username"])) {
+      echo "username";
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <form action="page4.phtml" method="GET">
+               <section>
+                   
+                    <fieldset>
+                        <legend>Ou commence ton histoire ?</legend>
+                        <label for="lieuhistoire">
+                            DANS LA RUE <img src="https://us.123rf.com/450wm/appalachianviews/appalachianviews1409/appalachianviews140900038/31472013-7th-avenue-vu-de-la-23%C3%A8me-rue-%C3%A0-manhattan-new-york.jpg?ver=6" alt="Image d'une rue"/>
+                        </label>
+                        <input type="radio" id="lieuhistoire" name="lieuhistoire" <?php header('Location : rue.phtml'); ?>/>
+                    
+                        <label for="lieuhistoire">
+                            DANS LA JUNGLE <img src="https://media.istockphoto.com/id/535499464/fr/photo/el-yunque-brume-matinale.jpg?s=612x612&w=0&k=20&c=mIMW8v1HeKy-iRYfScoCIaACDTqW8w03RU16xF3994g=" alt="Image d'une jungle" />
+                        </label>
+                        <input type="radio" id="lieuhistoire" name="lieuhistoire" <?php header('Location : jungle.phtml'); ?>/>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <button type="submit">
+                            CONTINUER VOTRE AVENTURE
+                        </button>
+                    </fieldset>
+                </section> 
+            </form>
+                <script src="main.js"></script>
+        </main>
+    </body>
+</html>
